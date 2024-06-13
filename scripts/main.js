@@ -25,8 +25,8 @@ async function open_terminal() {
   createText("You can run several commands:");
 
   createCode("about", "Who am i and what do i do.");
-  createCode("all", "See all commands.");
-  createCode("social", "All my social networks.");
+  createCode("ls", "See ls commands.");
+  createCode("social", "ls my social networks.");
 
   await delay(500);
   new_line();
@@ -61,7 +61,7 @@ function removeInput() {
 
 async function getInputValue() {
   const value = document.querySelector("input").value;
-  if (value === "all") {
+  if (value === "ls") {
     trueValue(value);
 
     createCode(
@@ -69,7 +69,7 @@ async function getInputValue() {
       "My github page with my projects. Follow me there ;)"
     );
     createCode("about", "Who am i and what do i do.");
-    createCode("social", "All my social networks.");
+    createCode("social", "ls my social networks.");
     createCode("clear", "Clean the terminal.");
   } else if (value === "projects") {
     trueValue(value);
@@ -80,7 +80,7 @@ async function getInputValue() {
     trueValue(value);
     createText("Lahcen Codes!");
     createText(
-      "👋 Welcome to LahcenCodes! <br> 👨‍💻 Software Developer | <span class='blue'> Python</span> Enthusiast <br> 🌍 Proudly Moroccan tech talent <br> 🚀 Empowering the next generation of coders <br> 💡 Sharing insights, tips, and code snippets <br> 🎯 Goal: Making coding accessible for all"
+      "👋 Welcome to LahcenCodes! <br> 👨‍💻 Software Developer | <span class='blue'> Python</span> Enthusiast <br> 🌍 Proudly Moroccan tech talent <br> 🚀 Empowering the next generation of coders <br> 💡 Sharing insights, tips, and code snippets <br> 🎯 Goal: Making coding accessible for ls"
     );
   } else if (value === "social") {
     trueValue(value);
@@ -97,9 +97,9 @@ async function getInputValue() {
     trueValue(value);
     createText("Didn't you mean: social?");
   } else if (value === "clear") {
-    document.querySelectorAll("p").forEach((e) => e.parentNode.removeChild(e));
+    document.querySelectorls("p").forEach((e) => e.parentNode.removeChild(e));
     document
-      .querySelectorAll("section")
+      .querySelectorls("section")
       .forEach((e) => e.parentNode.removeChild(e));
   } else {
     falseValue(value);
